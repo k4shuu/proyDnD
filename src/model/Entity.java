@@ -2,14 +2,14 @@ package model;
 
 public abstract class Entity {
     private String name;
-    private int hpMax,hpCurrent, AC , initiative;
+    private int hpMax,hpCurrent, armorClass , initiative;
     private Stats stats;
 
     public Entity(String name, int hpMax, int AC, Stats stats) {
         this.name = name;
         this.hpMax = hpMax;
         this.hpCurrent = hpMax;
-        this.AC = AC;
+        this.armorClass = AC;
         this.stats = stats;
         this.initiative = 0;
     }
@@ -34,7 +34,7 @@ public abstract class Entity {
     }
 
     public int getAC() {
-        return AC;
+        return armorClass;
     }
 
     public Stats getStats() {
