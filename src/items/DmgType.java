@@ -1,6 +1,6 @@
-package weapons;
+package items;
 
-public enum typeDmg {
+public enum DmgType {
     SLASHING,
     PIERCING,
     BLUDGEONING,
@@ -13,5 +13,6 @@ public enum typeDmg {
     THUNDER,
     FORCE,
     LIGHTNING,
-    ACID
+    ACID,
+    NONE,
 }
