@@ -3,7 +3,7 @@ public class Item {
 
     protected final String name;
     protected final int weight;   // peso en libras (lb)
-    protected final int value;    // valor en piezas de oro (gp)
+    protected final int value;    // valor en piezas de cobre (cp)
     protected int quantity;
     protected String description;
 
@@ -20,8 +20,8 @@ public class Item {
     }
 
     public String getName() { return name; }
-    public double getWeight() { return weight; }
-    public double getValue() { return value; }
+    public int getWeight() { return weight; }
+    public int getValue() { return value; }
     public int getQuantity() { return quantity; }
     public void setQuantity(int quantity) { this.quantity = quantity; }
     public String getDescription() { return description; }
@@ -33,6 +33,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return name + " (x" + quantity + ", " + weight + " lb c/u, " + value + " gp c/u)";
+        return name + " (x" + quantity + ", " + weight + " lb c/u, " + value + " cp c/u)";
     }
 }
