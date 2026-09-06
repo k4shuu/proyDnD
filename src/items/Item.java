@@ -2,16 +2,16 @@ package items;
 public class Item {
 
     protected final String name;
-    protected final double weight;   // peso en libras (lb)
-    protected final double value;    // valor en piezas de oro (gp)
+    protected final int weight;   // peso en libras (lb)
+    protected final int value;    // valor en piezas de oro (gp)
     protected int quantity;
     protected String description;
 
-    public Item(String name, double weight, double value) {
+    public Item(String name, int weight, int value) {
         this(name, weight, value, 1, "");
     }
 
-    public Item(String name, double weight, double value, int quantity, String description) {
+    public Item(String name, int weight, int value, int quantity, String description) {
         this.name = name;
         this.weight = weight;
         this.value = value;

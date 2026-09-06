@@ -5,11 +5,11 @@ public abstract class Entity {
     private int hpMax,hpCurrent, armorClass , initiative;
     private Stats stats;
 
-    public Entity(String name, int hpMax, int AC, Stats stats) {
+    public Entity(String name, int hpMax, int armorClass, Stats stats) {
         this.name = name;
         this.hpMax = hpMax;
         this.hpCurrent = hpMax;
-        this.armorClass = AC;
+        this.armorClass = armorClass;
         this.stats = stats;
         this.initiative = 0;
     }
@@ -20,7 +20,12 @@ public abstract class Entity {
         this.hpCurrent = Math.max(0, this.hpCurrent - dmg);
     }
     public abstract void attack(Entity target);
-
+    public void heal(int amount){
+        this.hpCurrent = Math.min(this.hpMax, this.hpCurrent + amount);
+    }
+    public int rollInitiative() {
+        return util.Dice.roll(20) + stats.getModif(Stat.DEXTERITY);
+    }
     public String getName() {
         return name;
     }
